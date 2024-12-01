@@ -1,0 +1,569 @@
+/* General Reset and Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    color: #00aec7;
+    padding: 20px 40px; /* Increased padding for a more substantial look */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    height: 80px; /* Increased height for a bigger header */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow for depth */
+}
+
+/* Navbar Brand (Logo Container) */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-right: 40px; /* Increased margin for separation from navigation items */
+}
+
+/* Logo */
+.logo {
+    height: 60px; /* Adjusted height to match the increased header size */
+    transition: height 0.3s ease; /* Smooth transition effect */
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center align items */
+    width: 100%;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0; /* Reset default margin */
+    display: flex; /* Display list items side by side */
+    align-items: center; /* Align items vertically */
+}
+
+/* Navigation Items */
+nav ul li {
+    position: relative; /* Position relative for submenu absolute positioning */
+    margin: 0 20px; /* Increased spacing between menu items */
+}
+
+/* Navigation Links */
+nav ul li a {
+    color: #00aec7;
+    text-decoration: none;
+    padding: 10px 16px; /* Increased padding for larger clickable area */
+    font-size: 18px; /* Larger font size */
+    font-weight: 500; /* Semi-bold for more prominence */
+    letter-spacing: 0.5px; /* Slight spacing for better readability */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+}
+
+/* Navigation Links Hover Effect */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+    color: #019b77; /* Maintain text color on hover */
+    border-radius: 4px; /* Optional: round the corners for a button-like effect */
+}
+
+/* Submenu Styling */
+.submenu1 {
+    display: none; /* Hide submenu initially */
+    position: absolute; /* Position it absolutely relative to parent li */
+    top: 100%; /* Position below the parent li */
+    left: 0;
+    background-color: #ffffff; /* Single-layer background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: light shadow for subtle effect */
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Remove list style */
+    z-index: 1000; /* Ensure it appears above other content */
+    border-radius: 4px; /* Optional: round the corners */
+    min-width: 150px; /* Increased minimum width for better fit */
+    width: max-content; /* Adjust width based on content */
+}
+
+/* Submenu Items */
+.submenu1 li {
+    padding: 0; /* Remove padding around li items */
+    background-color: transparent; /* Transparent background for each item */
+}
+
+/* Submenu Links */
+.submenu1 li a {
+    color: #00aec7; /* Text color for submenu links */
+    text-decoration: none;
+    display: block;
+    padding: 10px 16px; /* Adjusted padding inside each submenu link */
+    white-space: nowrap; /* Prevent text wrapping */
+    font-size: 16px; /* Slightly larger font size for better readability */
+}
+
+/* Show Submenu on Hover */
+nav ul li:hover .submenu1 {
+    display: block; /* Show submenu on hover */
+}
+
+/* Optional: Hover effect for submenu items */
+.submenu1 li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Lighter background on hover */
+}
+
+/* Banner box */
+.bannerbox {
+    position: relative;
+    width: 100%;
+    height: 520px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.bannercu .carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.bannercu .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bannercu .carousel-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.innertxt1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff;
+}
+
+.container1 {
+    text-align: left;
+    color: #fff;
+}
+
+.container1 h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.container1 ul {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 10px;
+}
+
+.container1 ul li {
+    font-size: 16px;
+    color: #fff;
+}
+
+.container1 ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.container1 ul li a:hover {
+    color: #ffd700; /* Change color on hover */
+}
+
+.container1 ul li::after {
+    content: "/";
+    margin-left: 10px;
+    color: #fff;
+}
+
+.container1 ul li:last-child::after {
+    content: "";
+}
+
+/* User Data */
+.user-details-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    width: 100vw; /* Full width of the viewport */
+}
+
+.form-container {
+    max-width: 100%; /* Full width */
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 48%; /* Two elements per row */
+}
+
+.form-group.full-width {
+    width: 100%; /* Occupy full width for comments */
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    width: 100%;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-container button[type="submit"] {
+    width: 10%; /* Reduced width for submit button */
+    padding: 12px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+    margin: 15px auto; /* Centering the button with auto margins */
+    display: block; /* Ensures the button behaves like a block element */
+}
+
+
+.form-container button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    .form-container button[type="submit"] {
+        width: 50%; /* Wider button for tablets */
+        font-size: 16px; /* Slightly smaller font */
+    }
+}
+
+/* Footer Styling */
+.footer {
+    background: url('../images/footer_bg.png') no-repeat center center / cover, rgba(0, 0, 0, 0.5); /* Combined background-image and color */
+    color: #fff;
+    padding: 30px 0;
+    position: relative;
+}
+
+/* Pattern Layer Styling (If used) */
+.footer .pattern-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it sits behind other content */
+    background: inherit; /* Use inherited background properties */
+}
+
+/* Container for Footer Content */
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Footer Inner Sections */
+.footer_in {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Left Side of the Footer */
+.footer_in_left {
+    flex: 1;
+    max-width: 50%;
+}
+
+.footer_in_left img {
+    max-width: 30px; /* Set a max width for the logo */
+    height: auto; /* Maintain the aspect ratio */
+    margin-right: 6px; /* Add space between the logo and the text */
+}
+
+.footer_in_left em {
+    font-size: 20px; /* Set the font size for the text */
+    font-weight: bold; /* Make the text bold */
+    color: #ffffff; /* Set a suitable color for the text */
+    vertical-align: middle; /* Align the text to the middle */
+}
+
+.footer_in_left h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 15px 0;
+    color: ghostwhite;
+}
+
+.footer_in_left p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Right Side of the Footer */
+.footer_in_right {
+    flex: 1;
+    max-width: 50%;
+    text-align: right;
+    margin-top: 240px; /* Adjust if needed */
+    padding-left: 80px; /* Adjust for positioning */
+}
+
+/* Links Styling */
+.footer_in_right a {
+    display: inline-block;
+    color: #000000; /* Adjusted color for better contrast */
+    font-size: 1.2rem;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Links */
+.footer_in_right a:hover {
+    color: #f0f0f0; /* Lighter color on hover */
+}
+
+/* Social Icons Styling */
+.footer_in_right .ft_soc {
+    margin: 20px 0;
+    display: flex;
+    justify-content: flex-end; /* Align icons to the right */
+}
+
+.footer_in_right .ft_soc a {
+    color: #000000; /* Adjusted color for icons */
+    font-size: 3rem;
+    margin-right: 15px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.footer_in_right .ft_soc a i {
+    font-size: 30px;
+    transition: transform 0.3s ease, color 0.5s ease;
+    z-index: 2;
+}
+
+.footer_in_right .ft_soc a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 0;
+    transform: scale(1, 0);
+    transform-origin: bottom;
+    transition: transform 0.5s ease;
+}
+
+.footer_in_right .ft_soc a:hover::before {
+    transform: scale(1, 1);
+}
+
+.footer_in_right .ft_soc a:hover i {
+    color: #fff;
+    transform: rotateY(360deg);
+}
+
+/* Social icons background colors */
+.footer_in_right .ft_soc a:nth-child(1) { --bg-color: #f42719; } /* Gmail */
+.footer_in_right .ft_soc a:nth-child(2) { --bg-color: #f93434; } /* Location */
+.footer_in_right .ft_soc a:nth-child(3) { --bg-color: #0088cc; } /* Facebook */
+.footer_in_right .ft_soc a:nth-child(4) { --bg-color: #0077b5; } /* LinkedIn */
+.footer_in_right .ft_soc a:nth-child(5) { --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7); } /* Instagram */
+.footer_in_right .ft_soc a:nth-child(6) { --bg-color: #00aff0; } /* Skype */
+.footer_in_right .ft_soc a:nth-child(7) { --bg-color: #00b389da; } /* Phone */
+
+/* Copyright Section */
+.copy {
+    text-align: center; /* Center text horizontally */
+    font-size: 0.9rem;
+    padding-top: 10px;
+    margin: 0 auto; /* Center the container if it's block-level and not already centered */
+}
+
+@keyframes landAnimation {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.footer_in_right.animate {
+    animation: landAnimation 1s ease-out;
+}
+
+.footer_in_left.animate {
+    animation: landAnimation 1s ease-out;
+}
+
+
+/* Media Query for mobile devices */
+@media only screen and (max-width: 768px) {
+
+    /* Header */
+    header {
+        padding: 10px 15px; /* Reduced padding */
+        height: 60px; /* Adjust height for mobile */
+    }
+
+    .navbar-brand {
+        margin-right: 10px; /* Reduced margin */
+    }
+
+    .logo {
+        height: 35px; /* Adjusted logo size */
+    }
+
+    nav ul li {
+        margin: 0 2px; /* Reduced spacing between menu items */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Smaller font size */
+        padding: 8px 5px; /* Reduced padding */
+    }
+
+    /* Banner Section */
+    .bannerbox {
+        height: 300px; /* Adjusted height for mobile */
+    }
+
+    .innertxt1 {
+        padding: 10px; /* Reduced padding */
+    }
+
+    .container1 h1 {
+        font-size: 32px; /* Adjust font size for mobile */
+    }
+
+    .container1 ul li {
+        font-size: 14px; /* Adjust font size */
+    }
+
+    /* User Data Section */
+    .user-details-section {
+        padding: 20px 10px; /* Reduced padding */
+    }
+
+    .form-container {
+        padding: 15px; /* Reduced padding */
+    }
+
+    .form-row {
+        flex-direction: column; /* Stack form rows */
+    }
+
+    .form-group {
+        width: 100%; /* Full width for mobile */
+    }
+
+    /* Footer */
+    .footer_in {
+        flex-direction: column; /* Stack footer content vertically */
+    }
+
+    .footer_in_left, 
+    .footer_in_right {
+        max-width: 100%;
+        text-align: center; /* Center-align footer content */
+        margin-bottom: 20px; /* Add space between sections */
+    }
+
+    .footer_in_right {
+        margin-top: 20px; /* Adjust margin */
+        padding-left: 0; /* Remove left padding */
+    }
+
+    .footer_in_right .ft_soc {
+        justify-content: center; /* Center-align social icons */
+    }
+
+    .footer_in_right .ft_soc a {
+        font-size: 2rem; /* Reduce icon size */
+        width: 40px; /* Adjust button size */
+        height: 40px;
+    }
+
+    .footer_in_right .ft_add {
+        margin-top: 10px;
+        padding-left: 0; /* Remove left padding */
+        justify-content: center; /* Center contact details */
+    }
+
+    .call-button-container {
+        align-items: center; /* Center the call button */
+    }
+    
+    .call-options {
+        left: 50%; /* Adjust position relative to button */
+        transform: translateX(-50%) translateY(-50%); /* Center horizontally */
+    }
+}

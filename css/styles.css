@@ -1,0 +1,964 @@
+/* General Reset and Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    color: #00aec7;
+    padding: 20px 40px; /* Increased padding for a more substantial look */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    height: 80px; /* Increased height for a bigger header */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow for depth */
+}
+
+/* Navbar Brand (Logo Container) */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-right: 40px; /* Increased margin for separation from navigation items */
+}
+
+/* Logo */
+.logo {
+    height: 60px; /* Adjusted height to match the increased header size */
+    transition: height 0.3s ease; /* Smooth transition effect */
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center align items */
+    width: 100%;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0; /* Reset default margin */
+    display: flex; /* Display list items side by side */
+    align-items: center; /* Align items vertically */
+}
+
+/* Navigation Items */
+nav ul li {
+    position: relative; /* Position relative for submenu absolute positioning */
+    margin: 0 20px; /* Increased spacing between menu items */
+}
+
+/* Navigation Links */
+nav ul li a {
+    color: #00aec7;
+    text-decoration: none;
+    padding: 10px 16px; /* Increased padding for larger clickable area */
+    font-size: 18px; /* Larger font size */
+    font-weight: 500; /* Semi-bold for more prominence */
+    letter-spacing: 0.5px; /* Slight spacing for better readability */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+}
+
+/* Navigation Links Hover Effect */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+    color: #019b77; /* Maintain text color on hover */
+    border-radius: 4px; /* Optional: round the corners for a button-like effect */
+}
+
+/* Submenu Styling */
+.submenu1 {
+    display: none; /* Hide submenu initially */
+    position: absolute; /* Position it absolutely relative to parent li */
+    top: 100%; /* Position below the parent li */
+    left: 0;
+    background-color: #ffffff; /* Single-layer background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: light shadow for subtle effect */
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Remove list style */
+    z-index: 1000; /* Ensure it appears above other content */
+    border-radius: 4px; /* Optional: round the corners */
+    min-width: 150px; /* Increased minimum width for better fit */
+    width: max-content; /* Adjust width based on content */
+}
+
+/* Submenu Items */
+.submenu1 li {
+    padding: 0; /* Remove padding around li items */
+    background-color: transparent; /* Transparent background for each item */
+}
+
+/* Submenu Links */
+.submenu1 li a {
+    color: #00aec7; /* Text color for submenu links */
+    text-decoration: none;
+    display: block;
+    padding: 10px 16px; /* Adjusted padding inside each submenu link */
+    white-space: nowrap; /* Prevent text wrapping */
+    font-size: 16px; /* Slightly larger font size for better readability */
+}
+
+/* Show Submenu on Hover */
+nav ul li:hover .submenu1 {
+    display: block; /* Show submenu on hover */
+}
+
+/* Optional: Hover effect for submenu items */
+.submenu1 li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Lighter background on hover */
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    width: 100vw;
+    height: 95vh; /* Height adjusted to 95% of the viewport */
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+.carousel-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex; /* Align items in a row */
+    transition: transform 0.5s ease-in-out; /* Transition for sliding effect */
+}
+
+.carousel-item {
+    width: 100%; /* Each item takes full width */
+    height: 100%;
+    flex: 0 0 100%; /* Ensures all items are the same width */
+    position: absolute;
+    top: 0;
+    opacity: 0; /* Hide all items initially */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
+}
+
+.carousel-item img {
+    width: 100vw; /* Ensure the image stretches across the entire width */
+    height: 100%; /* Scale image to fit height */
+    object-fit: cover; /* Cover area without white space */
+}
+
+/* Show the active item */
+.carousel-item.active {
+    opacity: 1; /* Fade in the active item */
+}
+
+/* Styling for images */
+
+
+.carousel-item.active img {
+    transform: scale(1.1); /* Zoom-in effect */
+}
+
+/* Dots for carousel navigation */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px; /* Position dots at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.carousel-dots input {
+    appearance: none;
+    background-color: transparent; /* Transparent background */
+    width: 30px; /* Size of the dot */
+    height: 50px; /* Size of the dot */
+    cursor: pointer;
+    position: relative;
+}
+
+.carousel-dots input::before {
+    content: "\2022"; /* Unicode for heart symbol */
+    font-size: 20px; /* Adjust size of the heart */
+    color: #ccc; /* Default unselected heart color */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.carousel-dots input:checked::before {
+    color: #cf0038; /* Change color to dark red when selected */
+}
+
+/* content styling */
+.content-image-section {
+    position: relative;
+    padding: 60px 0;
+    /* No separate background color or image here, it will blend with the main page's background */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content-image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.content {
+    padding-right: 20px;
+    text-align: left; /* Ensure text aligns left */
+}
+
+.content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.image {
+    text-align: right; /* Ensure image is aligned right */
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* @media (max-width: 768px) {
+    .content-image-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .content, .image {
+        text-align: center;
+    }
+
+    .content {
+        padding-right: 0;
+    }
+
+    .image img {
+        width: 80%; /* Adjust image size for smaller screens */
+    /* } */
+/* } */ 
+
+/* Keyframes for the animation */
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apply animation to the content and image */
+.content-image-grid.animate .content {
+    animation: slideInFromRight 1s ease-out;
+}
+
+.content-image-grid.animate .image {
+    animation: slideInFromLeft 1s ease-out;
+}
+
+/* Additional Section Styling */
+.additional-section {
+    position: relative;
+    padding: 60px 0;
+    overflow: hidden; /* Ensure elements do not overflow during animation */
+}
+
+/* Animation for additional-section */
+.additional-section .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Initial state for content and image (start outside viewport) */
+.additional-content,
+.additional-image {
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.8s ease;
+}
+
+/* Content starts from right (off-screen) */
+.additional-section .additional-content {
+    transform: translateX(100%); /* Start off-screen from the right */
+}
+
+/* Image starts from left (off-screen) */
+.additional-section .additional-image {
+    transform: translateX(-100%); /* Start off-screen from the left */
+}
+
+/* Animated state for both content and image (enter viewport) */
+.additional-section.animate .additional-content {
+    opacity: 1;
+    transform: translateX(0); /* Move to normal position */
+}
+
+.additional-section.animate .additional-image {
+    opacity: 1;
+    transform: translateX(0); /* Move to normal position */
+}
+
+/* Container Flex Layout */
+.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Additional Content Styling */
+.additional-content {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.additional-content h2 {
+    position: relative;
+    border-radius: 20px; /* Adjust the radius for the curvature */
+    overflow: hidden;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.additional-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Additional Image Styling */
+.additional-image {
+    flex: 1;
+    text-align: right;
+}
+
+.additional-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .additional-content {
+        padding: 0;
+    }
+
+    .additional-image {
+        margin-top: 20px;
+    }
+
+    .additional-image img {
+        width: 80%; /* Adjust image size for smaller screens */
+    }
+}
+
+/* triangle Section styling */
+.triangle-images-section {
+    position: relative;
+    padding: 150px 0; /* Keep top padding, increase bottom padding */
+    padding-bottom: 170px; /* Increased bottom padding for more space */
+    text-align: center;
+    background-color: #f0f0f0; /* Main page background color */
+    z-index: 1; /* Ensure content appears above the pseudo-element */
+    overflow: visible; /* Allow overflow to be visible */
+}
+
+/* Pseudo-element for the dimmed background image */
+.triangle-images-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bg_lite.png'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply; /* Blend image with the background */
+    opacity: 0.6; /* Adjust opacity for the background image dimming */
+    z-index: -1; /* Ensure it stays behind the content */
+}
+
+.triangle-container {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.triangle-image {
+    position: absolute; /* Keep images positioned absolutely */
+    justify-content: center; /* Centering can be done for any content inside if necessary */
+    align-items: center; /* Centering can be done for any content inside if necessary */
+    width: 450px; /* Increased width for consistency */
+    height: 250px; /* Keep the height constant */
+}
+
+.triangle-image img {
+    width: 85%; /* Use full width of the container */
+    height: 85%; /* Keep the height constant */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border: 1px solid #ccc; /* Optional: Add border to make images visible */
+    border-radius: 10px; /* Adjust this value for corners */
+    opacity: 0.8; /* Adjusted for better visibility */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transition effects for hover or focus states */
+}
+
+/* Button styling */
+.triangle-image a.button {
+    display: inline-block; /* Ensure buttons are not full width */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    background-color: #009c77;
+    color: #fff;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 20px 0;
+    padding: 1.2rem 3rem;
+    border: 1px solid;
+    border-radius: 999px;
+    box-sizing: border-box;
+    font-weight: 900;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    transition: box-shadow 0.5s;
+}
+
+.triangle-image a.button:hover {
+    -webkit-animation: pulse 0.5s;
+    animation: pulse 0.5s;
+    box-shadow: 0 0 0 2em transparent;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 #06f8bf;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 #06f8bf;
+    }
+}
+
+.top {
+    top: 0;
+}
+
+.bottom {
+    top: 57%; /* Adjust this value to move the bottom image further down */
+    transform: translateY(50%) translateX(-50%);
+}
+
+.triangle-image.top:nth-child(1) {
+    left: 20%;
+    transform: translateX(-50%);
+}
+
+.triangle-image.top:nth-child(3) {
+    right: 20%;
+    transform: translateX(50%);
+}
+
+.triangle-image.bottom {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.transparent-image {
+    position: absolute;
+    top: 50px; /* Adjust as needed for vertical positioning */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px; /* Set width to match triangle images */
+    height: 250px; /* Set height to match triangle images */
+    z-index: 0; /* Maintain appropriate stacking context */
+    animation: pop-up 1.5s ease forwards; /* Animation for visibility */
+    overflow: visible;
+}
+
+.transparent-image img {
+    width: 100%; /* Use full width of container */
+    height: auto; /* Ensure height is consistent with container */
+    object-fit: cover; /* Maintain aspect ratio while covering */
+    border-radius: 10px; /* Match border-radius for consistency */
+    opacity: 0.8; /* Adjust opacity for visibility */
+}
+
+
+/* Keyframes for transparent image popping up */
+@keyframes pop-up {
+    0% {
+        transform: translate(-50%, -70%); /* Start from above */
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%); /* End in the center */
+        opacity: 1;
+    }
+}
+
+
+/* Glow effect class for images */
+.triangle-image img.glow {
+    opacity: 1; /* Full opacity when glowing */
+    transform: scale(1.2); /* Slightly enlarge the image for emphasis */
+}
+
+/* To trigger the effect when the section is in view */
+.triangle-images-section.in-view .triangle-image img {
+    opacity: 1;
+    transform: scale(1.2); /* Enhanced scale for better effect */
+}
+
+/* Add glow effect class to target images */
+.triangle-images-section.in-view .triangle-image img.top:nth-child(1),
+.triangle-images-section.in-view .triangle-image img.top:nth-child(3),
+.triangle-images-section.in-view .triangle-image img.bottom {
+    opacity: 1;
+    transform: scale(1.2); /* Enhanced scale for better effect */
+}
+
+/* Footer Styling */
+.footer {
+    background: url('../images/footer_bg.png') no-repeat center center / cover, rgba(0, 0, 0, 0.5); /* Combined background-image and color */
+    color: #fff;
+    padding: 30px 0;
+    position: relative;
+}
+
+/* Pattern Layer Styling (If used) */
+.footer .pattern-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it sits behind other content */
+    background: inherit; /* Use inherited background properties */
+}
+
+/* Container for Footer Content */
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Footer Inner Sections */
+.footer_in {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Left Side of the Footer */
+.footer_in_left {
+    flex: 1;
+    max-width: 50%;
+}
+
+.footer_in_left .logo {
+    width: 30px; /* Reduce the size of the logo */
+    height: auto; /* Maintain the aspect ratio */
+    vertical-align: middle; /* Align the logo to the baseline of the text */
+}
+
+.footer_in_left em {
+    font-size: 24px; /* Increase the size of the text */
+    font-weight: bold; /* Make the text bold */
+    color: #ffffff; /* Set a suitable color for the text */
+    vertical-align: middle; /* Align the text to the middle of the image */
+}
+
+.footer_in_left h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 15px 0;
+    color: ghostwhite;
+}
+
+.footer_in_left p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Right Side of the Footer */
+.footer_in_right {
+    flex: 1;
+    max-width: 50%;
+    text-align: right;
+    margin-top: 240px; /* Adjust if needed */
+    padding-left: 80px; /* Adjust for positioning */
+}
+
+/* Links Styling */
+.footer_in_right a {
+    display: inline-block;
+    color: #000000; /* Adjusted color for better contrast */
+    font-size: 1.2rem;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Links */
+.footer_in_right a:hover {
+    color: #f0f0f0; /* Lighter color on hover */
+}
+
+/* Social Icons Styling */
+.footer_in_right .ft_soc {
+    margin: 20px 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px; /* Space between icons */
+}
+
+.footer_in_right .ft_soc a {
+    color: #ffffff;
+    font-size: 2rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: var(--bg-color); /* Initial background */
+}
+
+.footer_in_right .ft_soc a i {
+    font-size: 28px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    z-index: 2;
+}
+
+.footer_in_right .ft_soc a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform-origin: center;
+    transform: scale(0);
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+}
+
+.footer_in_right .ft_soc a:hover::before {
+    transform: scale(1);
+}
+
+.footer_in_right .ft_soc a:hover i {
+    color: #fff;
+    transform: rotateY(360deg);
+}
+
+/* Social icons background colors */
+.footer_in_right .ft_soc a:nth-child(1) { --bg-color: #f42719; } /* Gmail */
+.footer_in_right .ft_soc a:nth-child(2) { --bg-color: #f93434; } /* Location */
+.footer_in_right .ft_soc a:nth-child(3) { --bg-color: #0088cc; } /* Facebook */
+.footer_in_right .ft_soc a:nth-child(4) { --bg-color: #0077b5; } /* LinkedIn */
+.footer_in_right .ft_soc a:nth-child(5) { --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7); } /* Instagram */
+.footer_in_right .ft_soc a:nth-child(6) { --bg-color: #00aff0; } /* Skype */
+.footer_in_right .ft_soc a:nth-child(7) { --bg-color: #00b389; } /* Phone */
+
+/* Copyright Section */
+.copy {
+    text-align: center; /* Center text horizontally */
+    font-size: 0.9rem;
+    padding-top: 10px;
+    margin: 0 auto; /* Center the container if it's block-level and not already centered */
+}
+
+@keyframes landAnimation {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.footer_in_right.animate {
+    animation: landAnimation 1s ease-out;
+}
+
+.footer_in_left.animate {
+    animation: landAnimation 1s ease-out;
+}
+
+/* Media Queries for Mobile View */
+
+/* General mobile styles */
+@media only screen and (max-width: 768px) {
+    /* Header adjustments */
+    header {
+        padding: 10px 15px; /* Reduce padding for mobile */
+        height: 60px; /* Adjust height */
+    }
+
+    .navbar-brand {
+        margin-right: 10px; /* Reduced margin */
+    }
+
+    .logo {
+        height: 35px; /* Adjust logo size for mobile */
+    }
+
+    nav ul li {
+        margin: 0 2px;
+        flex-wrap: nowrap;
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Adjust font size for mobile */
+        padding: 8px 5px; /* Adjust padding for touch targets */
+    }
+
+    /* Carousel adjustments */
+    .carousel {
+        height: 30vh; /* Adjust carousel height */
+        margin-top: 60px; /* Adjust margin for mobile */
+    }
+
+    .carousel-item img {
+        width: 100%; /* Ensure full width for images */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Content adjustments */
+    .content-image-section {
+        padding: 30px 10px; /* Adjust padding for mobile */
+    }
+
+    .image img {
+        width: 100%; /* Ensure images fit the mobile screen */
+        height: 80%; /* Maintain aspect ratio */
+    }
+
+    .triangle-images-section {
+        padding: 60px 0 50px; /* Adjust padding */
+        margin-top: 140px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .triangle-container {
+        flex-direction: column; /* Stack images vertically */
+        width: 100%; /* Full width */
+    }
+
+    .triangle-image {
+        width: 70%; /* Adjust width */
+        height: auto;
+        margin-bottom: 20px; /* Space between images */
+    }
+
+    .triangle-image img {
+        width: 100%;
+        height: auto; /* Auto height for proportional scaling */
+    }
+
+    .transparent-image {
+        width: 85%; /* Adjust width for tablets */
+        height: auto;
+    }
+
+    .triangle-images-section {
+        display: grid; /* Use flexbox for vertical layout */
+        flex-direction: column-reverse; /* Ensure the transparent image is displayed first */
+        align-items: center; /* Center items horizontally */
+        padding: 80px 0; /* Maintain padding */
+    }
+
+    /* Ensure transparent image is the first to pop up */
+    .transparent-image {
+        position: absolute;
+        order: -1; /* Bring transparent image to the top */
+        margin-bottom: 0; /* Add space below the transparent image */
+        width: 80%; /* Responsive width */
+        height: 50%; /* Auto height for proportional scaling */
+    }
+
+    /* Set the stacking order for triangle images */
+    .triangle-container {
+        display: flex; /* Flexbox for vertical stacking */
+        flex-direction: column; /* Stack images vertically */
+        align-items: center; /* Center images horizontally */
+        width: 100%; /* Full width for the container */
+        height: auto; /* Ensure height adjusts based on content */
+    }
+
+    /* Adjust triangle images for mobile view */
+    .triangle-image {
+        position: relative; /* Ensure relative positioning */
+        width: 60%; /* Width for images */
+        margin-right: 90px;
+        height: auto; /* Auto height for proper scaling */
+        margin-bottom: 10px; /* Space between each image */
+    }
+
+    /* Ensure buttons stay with triangle images */
+    .triangle-image a.button {
+        margin-top: 10px; /* Space between image and button */
+    }
+
+    /* Ensure proper order of child images */
+    .triangle-image.top:nth-child(1) {
+        margin-left: 40%;
+        order: 1; /* child1 comes after transparent image */
+    }
+    .triangle-image.top:nth-child(3) {
+        order: 2; /* child2 comes next */
+    }
+    .triangle-image.bottom {
+        margin-right: 50%;
+        order: 3; /* child3 appears last */
+    }
+
+
+    /* Adjust the additional section layout */
+    .additional-section {
+        padding: 20px 0; /* Reduce padding */
+    }
+
+    .additional-content {
+        padding: 10px; /* Adjust padding */
+        text-align: center; /* Center text */
+    }
+
+    .additional-image img {
+        width: 100%; /* Full width for images */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Footer */
+    .footer_in {
+        flex-direction: column; /* Stack footer content vertically */
+    }
+
+    .footer_in_left, 
+    .footer_in_right {
+        max-width: 100%;
+        text-align: center; /* Center-align footer content */
+        margin-bottom: 20px; /* Add space between sections */
+    }
+
+    .footer_in_right {
+        margin-top: 20px; /* Adjust margin */
+        padding-left: 0; /* Remove left padding */
+    }
+
+    .footer_in_right .ft_soc {
+        justify-content: center; /* Center-align social icons */
+    }
+
+    .footer_in_right .ft_soc a {
+        font-size: 2rem; /* Reduce icon size */
+        width: 40px; /* Adjust button size */
+        height: 40px;
+    }
+
+    .footer_in_right .ft_add {
+        margin-top: 10px;
+        padding-left: 0; /* Remove left padding */
+        justify-content: center; /* Center contact details */
+    }
+}
+
+/* For very small mobile devices */
+@media (max-width: 576px) {
+    /* Further reduce header and nav styles */
+    header {
+        padding: 5px 10px; /* Reduce padding */
+        height: 50px; /* Further reduce height */
+    }
+
+    nav ul li a {
+        font-size: 12px; /* Smaller font size for small devices */
+        padding: 8px; /* Adjust padding for touch targets */
+    }
+
+    /* Additional content adjustments */
+    .additional-content h2 {
+        font-size: 1.5rem; /* Smaller font size for headings */
+    }
+
+    .additional-content p {
+        font-size: 0.9rem; /* Smaller paragraph font size */
+        line-height: 1.3; /* Adjust line height */
+    }
+}
