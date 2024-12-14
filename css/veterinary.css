@@ -256,35 +256,6 @@ button:hover {
     font-weight: 600; /* Make the text a bit stronger */
 }
 
-
-.table {
-    width: 100%;
-    border-collapse: collapse; /* Ensures cells align properly */
-}
-
-/* Ensure 'th' styles are applied correctly */
-.table th {
-    background-color: #06eac7;
-    font-weight: 600;
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    color: #fff; /* Ensure text is visible */
-    text-align: left;
-    padding: 10px;
-    white-space: nowrap; /* Prevent header wrapping */
-}
-
-/* Ensure 'td' does not interfere with 'th' */
-.table td {
-    text-align: left;
-    padding: 10px;
-}
-
-/* Styling for the table */
-.table-responsive {
-    overflow-x: auto;
-}
-
 .table {
     width: 100%;
     border-collapse: collapse;
@@ -332,7 +303,7 @@ button:hover {
 /* table 2 */
 /* Style for the Heading */
 h2 {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     text-align: left;
     color: #333;
@@ -343,25 +314,23 @@ h2 {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin: 20px 0;
     font-size: 16px;
+    text-align: left;
 }
 
 /* Table Header Styling */
 table thead th {
     background-color: #06eac7;
-    color: white;
     padding: 12px;
     text-transform: uppercase;
     border: 1px solid #ddd;
-    text-align: left;
+    color: #555;
 }
 
-/* Table Body Styling */
-table tbody td {
-    padding: 12px;
+/*  Body row Styling */
+table tbody tr {
     border: 1px solid #ddd;
-    color: #333;
 }
 
 /* Alternating Row Background */
@@ -374,7 +343,11 @@ table tbody tr:hover {
     background-color: #e2e2e2;
 }
 
-
+table tbody td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    color: #333;
+}
 
 /* Responsive Table for Smaller Screens */
 @media screen and (max-width: 768px) {
@@ -383,23 +356,8 @@ table tbody tr:hover {
         width: 100%;
     }
 
-    table thead {
-        width: 100%;
-        display: table-header-group; /* Default display for table headers */
-    }
-
-    table thead th {
-        width: auto; /* Ensure headers adjust */
-        padding: 15px 20px; /* Increase padding for clarity */
-        font-size: 18px; /* Adjust font size for better readability */
-    }
-    
-
     table tbody tr {
-        display: flex;
-        flex-direction: column;
         margin-bottom: 20px;
-        border: 1px solid #ddd;
     }
 
     table tbody td {
@@ -411,7 +369,7 @@ table tbody tr:hover {
     table tbody td:before {
         content: attr(data-label);
         position: absolute;
-        left: 10px;
+        left: 0;
         width: 50%;
         padding-left: 10px;
         font-weight: bold;
@@ -429,6 +387,47 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* Styling for table headers */
+.table th {
+    background-color: #06eac7;
+    font-weight: 600; /* Slightly bolder */
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
+    font-size: 16px; /* Optional: Adjust font size if needed */
+}
+
+/* Ensure equal column widths */
+.table th:nth-child(1), 
+.table td:nth-child(1) {
+    width: 50%;
+}
+
+.table th:nth-child(2), 
+.table td:nth-child(2) {
+    width: 50%;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Optional: Adjust font size in table cells */
+.table td {
+    font-size: 14px;
+}
+
+/* Style for the heading */
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #333;
+}
+
 /* General Table Styling */
 table {
     width: 100%;
@@ -444,7 +443,6 @@ table thead th {
     padding: 12px;
     text-transform: uppercase;
     border: 1px solid #ddd;
-    text-align: left;
 }
 
 /* Table Body Styling */
@@ -462,6 +460,34 @@ table tbody tr:nth-child(even) {
 /* Hover Effect for Table Rows */
 table tbody tr:hover {
     background-color: #e2e2e2;
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    table tbody tr {
+        margin-bottom: 20px;
+    }
+
+    table tbody td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    table tbody td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
 }
 
 /* Footer Styling */
@@ -566,7 +592,7 @@ table tbody tr:hover {
 .footer_in_right .ft_soc a {
     color: #000000; /* Adjusted color for icons */
     font-size: 3rem;
-    margin-right: 15px;
+    margin-right: 5px;
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -608,7 +634,7 @@ table tbody tr:hover {
 
 /* Social icons background colors */
 .footer_in_right .ft_soc a:nth-child(1) { --bg-color: #f42719; } /* Gmail */
-.footer_in_right .ft_soc a:nth-child(2) { --bg-color: #f93434; } /* Location */
+.footer_in_right .ft_soc a:nth-child(2) { --bg-color: #34f9b4; } /* Location */
 .footer_in_right .ft_soc a:nth-child(3) { --bg-color: #0088cc; } /* Facebook */
 .footer_in_right .ft_soc a:nth-child(4) { --bg-color: #0077b5; } /* LinkedIn */
 .footer_in_right .ft_soc a:nth-child(5) { --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7); } /* Instagram */

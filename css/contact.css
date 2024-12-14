@@ -388,7 +388,7 @@ textarea {
 .footer_in_right .ft_soc a {
     color: #000000; /* Adjusted color for icons */
     font-size: 3rem;
-    margin-right: 15px;
+    margin-right: 5px;
     text-decoration: none;
     display: flex;
     justify-content: center;

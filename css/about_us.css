@@ -503,7 +503,7 @@ img {
 .footer_in_right .ft_soc a {
     color: #000000; /* Adjusted color for icons */
     font-size: 3rem;
-    margin-right: 15px;
+    margin-right: 5px;
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -545,7 +545,7 @@ img {
 
 /* Social icons background colors */
 .footer_in_right .ft_soc a:nth-child(1) { --bg-color: #f42719; } /* Gmail */
-.footer_in_right .ft_soc a:nth-child(2) { --bg-color: #f93434; } /* Location */
+.footer_in_right .ft_soc a:nth-child(2) { --bg-color: #34f9b4; } /* Location */
 .footer_in_right .ft_soc a:nth-child(3) { --bg-color: #0088cc; } /* Facebook */
 .footer_in_right .ft_soc a:nth-child(4) { --bg-color: #0077b5; } /* LinkedIn */
 .footer_in_right .ft_soc a:nth-child(5) { --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7); } /* Instagram */

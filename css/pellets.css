@@ -469,7 +469,7 @@ table tbody td {
 .footer_in_right .ft_soc a {
     color: #000000; /* Adjusted color for icons */
     font-size: 3rem;
-    margin-right: 15px;
+    margin-right: 5px;
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -511,7 +511,7 @@ table tbody td {
 
 /* Social icons background colors */
 .footer_in_right .ft_soc a:nth-child(1) { --bg-color: #f42719; } /* Gmail */
-.footer_in_right .ft_soc a:nth-child(2) { --bg-color: linear-gradient(to top right, #f93434, #f0e32c, #00a753, #0088cc); } /* Location */
+.footer_in_right .ft_soc a:nth-child(2) { --bg-color: #34f9b4; } /* Location */
 .footer_in_right .ft_soc a:nth-child(3) { --bg-color: #0088cc; } /* Facebook */
 .footer_in_right .ft_soc a:nth-child(4) { --bg-color: #0077b5; } /* LinkedIn */
 .footer_in_right .ft_soc a:nth-child(5) { --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7); } /* Instagram */
@@ -668,17 +668,5 @@ table tbody td {
         margin-top: 10px; /* Adjust margin */
         padding-left: 0; /* Remove left padding */
         justify-content: center; /* Center contact details */
-    }
-
-    /* Call Button */
-    .call-button-container {
-        width: 100%; /* Full width */
-        margin: 0; /* Reset margin */
-        align-items: center; /* Center the call button */
-    }
-
-    .call-options {
-        left: 50%; /* Adjust position relative to button */
-        transform: translateX(-50%) translateY(-50%); /* Center horizontally */
     }
 }
