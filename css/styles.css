@@ -786,7 +786,7 @@ nav ul li:hover .submenu1 {
 
     /* Carousel adjustments */
     .carousel {
-        height: 30vh; /* Adjust carousel height */
+        height: 320px; /* Adjust carousel height */
         margin-top: 60px; /* Adjust margin for mobile */
     }
 
