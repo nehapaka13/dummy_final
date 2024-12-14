@@ -138,7 +138,7 @@ nav ul li:hover .submenu1 {
 
 .carousel-item {
     width: 100%; /* Each item takes full width */
-    height: 80%;
+    height: 100%;
     flex: 0 0 100%; /* Ensures all items are the same width */
     position: absolute;
     top: 0;
@@ -148,7 +148,7 @@ nav ul li:hover .submenu1 {
 
 .carousel-item img {
     width: 100%; /* Ensure full width for images */
-    height: 100%; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
     /* width: 100vw; /* Ensure the image stretches across the entire width */
     /* height: 100%; /* Scale image to fit height */
     /* object-fit: cover; Cover area without white space */
@@ -169,7 +169,7 @@ nav ul li:hover .submenu1 {
 /* Dots for carousel navigation */
 .carousel-dots {
     position: absolute;
-    bottom: 90px; /* Position dots at the bottom */
+    bottom: 20px; /* Position dots at the bottom */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
