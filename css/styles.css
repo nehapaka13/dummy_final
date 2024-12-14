@@ -948,26 +948,25 @@ nav ul li:hover .submenu1 {
         padding: 8px; /* Adjust padding for touch targets */
     }
 
-    .carousel {
-        width: 100%; /* Ensure carousel doesn't overflow */
-        height: auto; /* Let the height scale properly */
-        overflow: hidden; /* Prevent overflow */
-    }
-
     .carousel-item img {
         width: 100%; /* Ensure full width for images */
         height: 80%; /* Maintain aspect ratio */
     }
 
-    .content-image-section {
-        padding: 15px 5px; /* Adjust padding for smaller screens */
+    .content-image-grid {
+        display: flex;
+        flex-direction: column; /* Stack content and image vertically on small screens */
+        align-items: center; /* Center content */
     }
 
-    /* Image adjustments */
+    .content {
+        text-align: center; /* Center the text */
+        margin-bottom: 20px; /* Add space between text and image */
+    }
+
     .image img {
-        width: 100%; /* Ensure images fit the mobile screen */
+        width: 100%; /* Ensure full width for the image */
         height: auto; /* Maintain aspect ratio */
-        object-fit: cover; /* Ensure image covers area without stretching */
     }
 
     /* Additional content adjustments */
