@@ -786,13 +786,13 @@ nav ul li:hover .submenu1 {
 
     /* Carousel adjustments */
     .carousel {
-        height: 320px; /* Adjust carousel height */
+        height: 30vh; /* Adjust carousel height */
         margin-top: 60px; /* Adjust margin for mobile */
     }
 
     .carousel-item img {
-        width: 100%; /* Ensure full width for images */
-        height: auto; /* Maintain aspect ratio */
+        width: 80%; /* Ensure full width for images */
+        height: 320px; /* Maintain aspect ratio */
     }
 
     /* Content adjustments */
@@ -949,8 +949,8 @@ nav ul li:hover .submenu1 {
     }
 
     .carousel-item img {
-        width: 100%; /* Ensure full width for images */
-        height: 80%; /* Maintain aspect ratio */
+        width: 80%; /* Ensure full width for images */
+        height: 320px; /* Maintain aspect ratio */
     }
 
     /* Additional content adjustments */
