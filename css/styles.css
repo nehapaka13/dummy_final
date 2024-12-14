@@ -783,18 +783,7 @@ nav ul li:hover .submenu1 {
         font-size: 14px; /* Adjust font size for mobile */
         padding: 8px 5px; /* Adjust padding for touch targets */
     }
-
-    /* Carousel adjustments */
-    .carousel {
-        height: 30vh; /* Adjust carousel height */
-        margin-top: 60px; /* Adjust margin for mobile */
-    }
-
-    .carousel-item img {
-        width: 100%; /* Ensure full width for images */
-        height: auto; /* Maintain aspect ratio */
-    }
-
+    
     /* Content adjustments */
     .content-image-section {
         padding: 30px 10px; /* Adjust padding for mobile */
