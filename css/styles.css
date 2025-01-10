@@ -122,8 +122,8 @@ nav ul li:hover .submenu1 {
 /* Carousel */
 .carousel {
     position: relative;
-    width: 100vw;
-    height: 95vh; /* Height adjusted to 95% of the viewport */
+    width: 100%;
+    height: 520px; /* Height adjusted to 95% of the viewport */
     overflow: hidden;
     margin-top: 80px;
 }
@@ -147,11 +147,9 @@ nav ul li:hover .submenu1 {
 }
 
 .carousel-item img {
-    width: 100%; /* Ensure full width for images */
-    height: auto; /* Maintain aspect ratio */
-    /* width: 100vw; /* Ensure the image stretches across the entire width */
-    /* height: 100%; /* Scale image to fit height */
-    /* object-fit: cover; Cover area without white space */
+    width: 100vw; /* Ensure the image stretches across the entire width */
+    height: 100%; /* Scale image to fit height */
+    object-fit: cover; /* Cover area without white space */
 }
 
 /* Show the active item */
@@ -788,8 +786,11 @@ nav ul li:hover .submenu1 {
 
     /* Carousel adjustments */
     .carousel {
-        height: 30vh; /* Adjust carousel height */
+        height: 320px; /* Adjust carousel height */
         margin-top: 60px; /* Adjust margin for mobile */
+    }
+    .carousel-container {
+        height: 320px;
     }
 
     .carousel-item img {
